@@ -15,18 +15,10 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel=stylesheet>
     <!-- Latest compiled and minified CSS -->
    
 </head>
 <body>
-  <!--header>
-    <a href=/><img src="images/p.png" alt="logo fanpodcast" height=90 width=90 class=is-avatar></a>
-    <div>
-      <h1>@fanpodcast</h1>
-      <h2></h2>
-    </div>
-  </header-->
   <header>
       <a href=assets/images/p.png><img src="assets/images/p.png" alt="logo fanpodcast" height=90 width=90 class=is-avatar></a>
             <div id="theme">
@@ -58,6 +50,7 @@
             }
         </script>
   </header>
+
        
         <div class="columns">
             <div id="article">
@@ -69,36 +62,120 @@
                   <a href="https://fanpodcast.space/podcast/">Podcast</a>&ensp;<br>
                   <a href="https://fanpodcast.space/download/">Download</a>&ensp;<br>
                         <br>
-
-
             </div>
-                  
-
               </div>&emsp;<hr class="gkiri" >&emsp;
               <div class="tubuh">
-                <h1 class="title" > Selamat Datang! </h1>
-                <div class=line></div>
-            <h4>
-               
-            </h4>
+                <h1 class="title" > Selamat Mendengarkan!</h1>
+                <div class="line" ></div>
+      <main id=main>
+        <div class="iframe" >
+              <iframe src="https://anchor.fm/fajar-a-nugroho/embed/episodes/Sefruit-Trailer-e9m6je" height="100%" width="100%" frameborder="0" scrolling="no"></iframe>
+        </div>                
+              <h1 class=title>Catatan</h1>
+              <div class=line></div> 
+        <article>
+              <p >
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p> 
+              </article>
+        <section>
+          <input type="text" class="boxSearch search" placeholder="Cari artikel.." />
+          <div class="listSearch" >
+            <div class=title>Daftar Episode</div>
+              <div class=line></div>
 
-  <br>
+                <a href="#" class=boxes>
+                  <p>Eps 02 : Berguna bagi orang lain (ongoing)</p>
+                  <div class=arrow-right></div>
+                </a>
+
+                <a href="https://fanpodcast.space/podcast/episode1/" class=boxes>
+                  <p>Eps 01 : Makna Secangkir Kopi</p>
+                  <div class=arrow-right></div>
+                </a>
+
+                <a href="#" class=boxes>
+                  <p>Eps 00 : Trailer</p>
+                  <div class=arrow-right></div>
+                </a>
+              </div>
+        </section>
+      </main>
 
 
+<script src=https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>(async()=>{const res=await fetch('/index.json');const itemsRaw=await res.json();const items=itemsRaw.data
+new Vue({delimiters:['${','}'],el:'#main',data:{items:items,currentItem:"",search_q:"",loading:true,},methods:{play:function(item){this.currentItem=item}},computed:{filteredItems:function(){let itemWithFilter=this.items.filter((item)=>{return item.title.toLowerCase().includes(this.search_q.toLowerCase())})
+return itemWithFilter}}})})();</script>
 
+<hr>
 
+<div class="footer" >
+  <img src=assets/images/3.png alt="fajar" width=80 height=80 class="is-avatar img-small">
+    <p>Terima kasih sudah membaca, Semoga hari anda menyenangkan, Baca artikel lainnya di <a href="https://fajarbaiz.com/article/">sini</a>.
+Dengarkan <a href="https://fanpodcast.github.io/">Podcast</a> untuk mengisi rasa bosan anda.
+Kamu juga boleh mampir ke Project saya <a href="https://fajarbaiz.com/#work">disini</a>
+    </p>
 </div>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://ngopiyuk.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 
+             
           </div>
           
         </div>
-               <br><br>
 
+        <br>
+   
 
-<footer>
+          <script id="dsq-count-scr" src="//ngopiyuk.disqus.com/count.js" async></script>
+          <footer>
             © 2019 | @fanpodcast.space
-</footer>
-</body>
+        </footer>
 
+        <script>
+    $(document).ready(function($){
+
+        $('.listSearch p').each(function(){
+            $(this).attr('searchData', $(this).text().toLowerCase());
+        });
+        $('.boxSearch').on('keyup', function(){
+        var dataList = $(this).val().toLowerCase();
+            $('.listSearch p').each(function(){
+                if ($(this).filter('[searchData *= ' + dataList + ']').length > 0 || dataList.length < 1) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        });
+
+    });
+</script>
+</body>
 </html>
