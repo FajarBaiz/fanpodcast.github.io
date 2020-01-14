@@ -134,7 +134,8 @@ blockquote {
         margin-top: -25px;
         position: relative;
         top: 80px;
-        right: 250px;
+        right: 275px;
+        margin-right: -20px;
     }
 
     .darkm{
