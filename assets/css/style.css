@@ -275,13 +275,13 @@ a:active{
     width:0;height:0;
     border-top:10px solid transparent;
     border-bottom:10px solid transparent;
-    border-left:10px solid black;
+    border-left:15px solid black;
 }
 .darkmode .arrow-right{
     width:0;height:0;
     border-top:10px solid transparent;
     border-bottom:10px solid transparent;
-    border-left:10px solid white;
+    border-left:15px solid white;
 }
 #content a{
     text-decoration:underline
@@ -302,6 +302,23 @@ footer{
     background:lightgrey;
     width:70%;
     color: rgb(57, 57, 57);
+}
+.footer{
+    display: flex;
+    width: 80%;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.img-small {
+    min-width: 80px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.footer img {
+    margin-right: 40px;
 }
 .darkmode footer{
     justify-content:space-between;
