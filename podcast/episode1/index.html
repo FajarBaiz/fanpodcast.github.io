@@ -1,0 +1,137 @@
+
+<!-- =====================================================================================================
+============================== Halooo !!! ngintip aja bro ================================================
+==========================================================================================================
+!-->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> FanPodcast | @fanpodcast </title>
+
+    
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+   
+</head>
+<body>
+ <header>
+      <a href=../../assets/images/p.png><img src="../../assets/images/p.png" alt="logo fanpodcast" height=90 width=90 class=is-avatar></a>
+            <div id="theme">
+                <div onclick="setDarkMode(true)" id="darkBtn" class=""><h5>🌚Dark</h5></div>
+                <div onclick="setDarkMode(false)" id="lightBtn" class="is-hidden">  <h5>🌝Light</h5> </div>
+            </div>
+
+        <script>
+            //check localstorage
+            if(localStorage.getItem('preferredTheme') == 'dark') {
+                setDarkMode(true)
+            }
+
+            function setDarkMode(isDark) {
+                var darkBtn = document.getElementById('darkBtn')
+                var lightBtn = document.getElementById('lightBtn')
+
+                if(isDark) {
+                    lightBtn.style.display = "block"
+                    darkBtn.style.display = "none"
+                    localStorage.setItem('preferredTheme', 'dark');
+                } else {
+                    lightBtn.style.display = "none"
+                    darkBtn.style.display = "block"
+                    localStorage.removeItem('preferredTheme');
+                }
+
+                document.body.classList.toggle("darkmode");
+            }
+        </script>
+  </header>
+
+
+       
+        <div class="columns">
+            <div id="article">
+
+              <!--div class="logo" ><img class="" style="height: 75px;" src="images/kopi.png"></div-->
+              <!--h3 class="is-headline" >@ngopiyuk</h3-->
+            <div class="list">
+                  <a href="https://fanpodcast.space/">Home</a>&ensp;<br>
+                  <a href="https://fanpodcast.space/podcast">Podcast</a>&ensp;<br>
+                  <a href="https://fanpodcast.space/download/">Download</a>&ensp;<br>
+            </div>
+                    
+              </div>&emsp;<hr class="gkiri" >&emsp;
+              <div class="tubuh">
+                <h1 class="title" >Episode 01</h1>
+                <div class="line" ></div>
+        <main id=main>
+         	<div class="iframe" >
+                <iframe src=https://anchor.fm/fajar-a-nugroho/embed/episodes/Episode-1---Makna-dari-Secangkir-Kopi-e486kp height=70% width=100% frameborder=0 scrolling=no></iframe>
+            </div>
+
+          	<h1 style="text-align: left;" class=title>Catatan</h1>
+                <div class=line></div>
+              		<p style="text-align: left;" >Memfilosofikan kopi bisa dikatakan memberi pandangan hidup dan memaknai kehidupan dari secangkir kopi. Tidak banyak orang yang dapat memfilosofikan kopi berdasarkan jenisnya termasuk saya. Setiap jenis kopi punya filosofinya masing-masing. Filosofi tersebut akan timbul dari peranmu yang sangat paham akan karakter suatu jenis kopi sehingga ia dapat memfilosofikannya dalam kehidupan.</p>
+        
+        </main>
+
+
+
+<script src=https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js></script>
+<script>(async()=>{const res=await fetch('/index.json');const itemsRaw=await res.json();const items=itemsRaw.data
+new Vue({delimiters:['${','}'],el:'#main',data:{items:items,currentItem:"",search_q:"",loading:true,},methods:{play:function(item){this.currentItem=item}},computed:{filteredItems:function(){let itemWithFilter=this.items.filter((item)=>{return item.title.toLowerCase().includes(this.search_q.toLowerCase())})
+return itemWithFilter}}})})();</script>
+
+<br><br>
+
+<hr>
+
+<div class="footer" >
+  <img src=../../assets/images/3.png alt="fajar" width=80 height=80 class="is-avatar img-small">
+    <p>Terima kasih sudah membaca, Semoga hari anda menyenangkan, Baca artikel lainnya di <a href="https://fajarbaiz.com/article/">sini</a>.
+Dengarkan <a href="https://fanpodcast.github.io/">Podcast</a> untuk mengisi rasa bosan anda.
+Kamu juga boleh mampir ke Project saya <a href="https://fajarbaiz.com/#work">disini</a>
+    </p>
+</div>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://ngopiyuk.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+             
+          </div>
+          
+        </div>
+
+        <br>
+ 
+    <!--footer-->
+         <footer>
+            © 2019 | @fanpodcast.space
+        </footer>
+          <!--footer-->
+
+          <script id="dsq-count-scr" src="//ngopiyuk.disqus.com/count.js" async></script>
+</body>
+</html>
