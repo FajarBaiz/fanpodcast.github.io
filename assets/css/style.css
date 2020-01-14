@@ -64,7 +64,7 @@ header{
 }
 
 body.darkmode {
-    background: rgb(57, 57, 57);
+    background: #181E25;
     color: rgb(227, 227, 227);
 }
 
@@ -235,7 +235,7 @@ a:active{
     outline:none
 }
 .search{
-    background:white;
+    background:lightgrey;
     box-sizing:border-box;
     color:black;
     border:0px;
@@ -245,6 +245,18 @@ a:active{
     font-size:1rem;
     margin-bottom:20px;
     outline:none
+}
+.darkmode .search{
+    background:#313942;
+    box-sizing: border-box;
+    color: #fcfcfc;
+    border: 0px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    outline: none;
 }
 .title{
     font-size:1.5rem;
