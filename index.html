@@ -1,0 +1,105 @@
+
+<!-- =====================================================================================================
+============================== Halooo !!! ngintip aja bro ================================================
+==========================================================================================================
+!-->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> FanPodcast | @fanpodcast </title>
+
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel=stylesheet>
+    <!-- Latest compiled and minified CSS -->
+   
+</head>
+<body>
+  <!--header>
+    <a href=/><img src="images/p.png" alt="logo fanpodcast" height=90 width=90 class=is-avatar></a>
+    <div>
+      <h1>@fanpodcast</h1>
+      <h2></h2>
+    </div>
+  </header-->
+  <header>
+      <a href=images/p.png><img src="images/p.png" alt="logo fanpodcast" height=90 width=90 class=is-avatar></a>
+            <div id="theme">
+                <div onclick="setDarkMode(true)" id="darkBtn" class=""><h5>🌚Dark</h5></div>
+                <div onclick="setDarkMode(false)" id="lightBtn" class="is-hidden">  <h5>🌝Light</h5> </div>
+            </div>
+
+        <script>
+            //check localstorage
+            if(localStorage.getItem('preferredTheme') == 'dark') {
+                setDarkMode(true)
+            }
+
+            function setDarkMode(isDark) {
+                var darkBtn = document.getElementById('darkBtn')
+                var lightBtn = document.getElementById('lightBtn')
+
+                if(isDark) {
+                    lightBtn.style.display = "block"
+                    darkBtn.style.display = "none"
+                    localStorage.setItem('preferredTheme', 'dark');
+                } else {
+                    lightBtn.style.display = "none"
+                    darkBtn.style.display = "block"
+                    localStorage.removeItem('preferredTheme');
+                }
+
+                document.body.classList.toggle("darkmode");
+            }
+        </script>
+  </header>
+       
+        <div class="columns">
+            <div id="article">
+
+              <!--div class="logo" ><img class="" style="height: 75px;" src="images/kopi.png"></div-->
+              <!--h3 class="is-headline" >@ngopiyuk</h3-->
+            <div class="list">
+                  <a href="https://fanpodcast.space/">Home</a>&ensp;<br>
+                  <a href="https://fanpodcast.space/podcast/">Podcast</a>&ensp;<br>
+                  <a href="https://fanpodcast.space/note/">Download</a>&ensp;<br>
+                        <br>
+
+
+            </div>
+                  
+
+              </div>&emsp;<hr class="gkiri" >&emsp;
+              <div class="tubuh">
+                <h1 class="title" > Selamat Datang! </h1>
+                <div class=line></div>
+            <h4>
+               
+            </h4>
+
+  <br>
+
+
+
+
+</div>
+
+
+          </div>
+          
+        </div>
+               <br><br>
+
+
+<footer>
+            © 2019 | @fanpodcast.space
+</footer>
+</body>
+
+</html>

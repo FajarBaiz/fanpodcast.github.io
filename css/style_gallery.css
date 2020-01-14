@@ -1,0 +1,47 @@
+/*Memberikan Border Pada image*/
+.img {
+    border: 1px solid #ccc; 
+}
+/*Memberikan efek pada saat pointer di tujukan ke image*/
+.img:hover {
+    border: 1px solid #777; 
+}
+/*Membuat lebar sesuai dengan ukuran lebar class responsive*/
+.img img {
+    width: 100%;
+    height: auto;
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+/*membuat box-size pada body*/
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+/*berfungsi untuk mengubah style class responsive pada lebar maksimum 700px*/
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+/*berfungsi untuk mengubah style class responsive pada lebar maksimum 500px*/
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+/*clearfix adalah cara praktis yang digunakan untuk clear element yang sebelumnya mengalami float*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
