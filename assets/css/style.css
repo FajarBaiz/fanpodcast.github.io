@@ -175,9 +175,6 @@ blockquote {
         font-size: 1em;
         margin-top: -15px;
     }
-    .iframe{
-    margin-bottom: -63px;
-}
 
 }
 .list{
@@ -207,13 +204,13 @@ a:active{
 }
 
 
-
+iframe{
+    margin-bottom:0px;
+}
 .link{
     text-decoration:underline
 }
-.iframe{
-    padding-top: 30px;
-}
+
 .btn{
     background:#1DA1F2;
     border-radius:10px;
@@ -318,13 +315,12 @@ footer{
 }
 .footer{
     display: flex;
-    width: 80%;
+    width: 90%;
     font-size: 1rem;
     margin-bottom: 10px;
     align-items: center;
 }
 .img-small {
-    min-width: 80px;
     width: 80px;
     height: 80px;
     border-radius: 50%;
