@@ -244,6 +244,11 @@ a:active {
 	justify-content: space-between;
 	margin-top: 10px;
 }
+.boxeses {
+	padding: 5px 10px;
+	margin-bottom: -40px;
+	margin-top: 10px;
+}
 
 .boxes .pic {
 	margin-right: 15px;
