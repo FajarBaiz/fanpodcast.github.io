@@ -6,6 +6,15 @@
 #player iframe {
 	margin-bottom: -20px
 }
+
+.other{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 10px;
+	margin-top: 20px;
+}
+
 body {
 	background: #faf9f5;
 	width: 70%;
@@ -233,11 +242,11 @@ a:active {
 	align-items: center;
 	padding: 5px 10px;
 	justify-content: space-between;
+	margin-top: 10px;
 }
 
 .boxes .pic {
 	margin-right: 15px;
-	position: relative;
 }
 
 .boxes:hover {
