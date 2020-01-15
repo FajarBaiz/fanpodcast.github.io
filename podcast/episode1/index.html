@@ -19,7 +19,7 @@
    
 </head>
 <body>
- <header>
+  <header>
       <a href=../../assets/images/p.png><img src="../../assets/images/p.png" alt="logo fanpodcast" height=90 width=90 class=is-avatar></a>
             <div id="theme">
                 <div onclick="setDarkMode(true)" id="darkBtn" class=""><h5>🌚Dark</h5></div>
@@ -51,7 +51,6 @@
         </script>
   </header>
 
-
        
         <div class="columns">
             <div id="article">
@@ -60,36 +59,58 @@
               <!--h3 class="is-headline" >@ngopiyuk</h3-->
             <div class="list">
                   <a href="https://fanpodcast.space/">Home</a>&ensp;<br>
-                  <a href="https://fanpodcast.space/podcast">Episodes</a>&ensp;<br>
+                  <a href="https://fanpodcast.space/podcast/">Episodes</a>&ensp;<br>
                   <a href="https://anchor.fm/fajar-a-nugroho">Download</a>&ensp;<br>
+                        <br>
             </div>
-                    
               </div>&emsp;<hr class="gkiri" >&emsp;
               <div class="tubuh">
                 <h1 class="title" >Episode 01</h1>
                 <div class="line" ></div>
-        <main id=main>
-          <section id=player>
+      <main id=main>
+      <section id=player>
             <div>
                 <iframe src=https://anchor.fm/fajar-a-nugroho/embed/episodes/Episode-1---Makna-dari-Secangkir-Kopi-e486kp height=70% width=100% frameborder=0 scrolling=no></iframe>
             </div>
           </section>
-         	
 
-          	<h1 style="text-align: left;" class=title>Catatan</h1>
-                <div class=line></div>
-              		<p style="text-align: left;" >Memfilosofikan kopi bisa dikatakan memberi pandangan hidup dan memaknai kehidupan dari secangkir kopi. Tidak banyak orang yang dapat memfilosofikan kopi berdasarkan jenisnya termasuk saya. Setiap jenis kopi punya filosofinya masing-masing. Filosofi tersebut akan timbul dari peranmu yang sangat paham akan karakter suatu jenis kopi sehingga ia dapat memfilosofikannya dalam kehidupan.</p>
-        
-        </main>
+              <h1 class=title>Catatan</h1>
+              <div class=line></div> 
+        <article>
+              <p >
+                Memfilosofikan kopi bisa dikatakan memberi pandangan hidup dan memaknai kehidupan dari secangkir kopi. Tidak banyak orang yang dapat memfilosofikan kopi berdasarkan jenisnya termasuk saya. Setiap jenis kopi punya filosofinya masing-masing. Filosofi tersebut akan timbul dari peranmu yang sangat paham akan karakter suatu jenis kopi sehingga ia dapat memfilosofikannya dalam kehidupan.
+              </p> 
+              </article>
+        <section>
+          <input type="text" class="boxSearch search" placeholder="Cari artikel.." />
+          <div class="listSearch" >
+            <div class=title>Daftar Episode</div>
+              <div class=line></div>
 
+                <a href="#" class=boxes>
+                  <p>Eps 02 : Berguna bagi orang lain (ongoing)</p>
+                  <div class=arrow-right></div>
+                </a>
+
+                <a href="https://fanpodcast.space/podcast/episode1/" class=boxes>
+                  <p>Eps 01 : Makna Secangkir Kopi</p>
+                  <div class=arrow-right></div>
+                </a>
+
+                <a href="#" class=boxes>
+                  <p>Eps 00 : Trailer</p>
+                  <div class=arrow-right></div>
+                </a>
+              </div>
+        </section>
+      </main>
 
 
 <script src=https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>(async()=>{const res=await fetch('/index.json');const itemsRaw=await res.json();const items=itemsRaw.data
 new Vue({delimiters:['${','}'],el:'#main',data:{items:items,currentItem:"",search_q:"",loading:true,},methods:{play:function(item){this.currentItem=item}},computed:{filteredItems:function(){let itemWithFilter=this.items.filter((item)=>{return item.title.toLowerCase().includes(this.search_q.toLowerCase())})
 return itemWithFilter}}})})();</script>
-
-<br><br>
 
 <hr>
 
@@ -121,15 +142,28 @@ s.setAttribute('data-timestamp', +new Date());
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <script id="dsq-count-scr" src="//fajarbaiz.disqus.com/count.js" async></script>
-
-        <br>
- 
-    <!--footer-->
-         <footer>
+          <footer>
             © 2019 | @fanpodcast.space
         </footer>
-          <!--footer-->
 
-          <script id="dsq-count-scr" src="//ngopiyuk.disqus.com/count.js" async></script>
+        <script>
+    $(document).ready(function($){
+
+        $('.listSearch p').each(function(){
+            $(this).attr('searchData', $(this).text().toLowerCase());
+        });
+        $('.boxSearch').on('keyup', function(){
+        var dataList = $(this).val().toLowerCase();
+            $('.listSearch p').each(function(){
+                if ($(this).filter('[searchData *= ' + dataList + ']').length > 0 || dataList.length < 1) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        });
+
+    });
+</script>
 </body>
 </html>
