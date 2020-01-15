@@ -8,7 +8,7 @@
 }*/
 
 #player{margin-top:20px;margin-bottom:40px;text-align:center}
-#player iframe{margin-bottom:0px}
+#player iframe{margin-bottom:-20px}
 
 
 body{
@@ -116,8 +116,7 @@ blockquote {
 
     .list{
         position: relative;
-        
-        top: -25px;
+        top: -5px;
         display: inline-flex;
     }
 
