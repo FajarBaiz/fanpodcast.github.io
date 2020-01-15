@@ -62,13 +62,6 @@
                 </a>
               </div>
         </section>
-
-
-
-<script src=https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js></script>
-<script>(async()=>{const res=await fetch('/index.json');const itemsRaw=await res.json();const items=itemsRaw.data
-new Vue({delimiters:['${','}'],el:'#main',data:{items:items,currentItem:"",search_q:"",loading:true,},methods:{play:function(item){this.currentItem=item}},computed:{filteredItems:function(){let itemWithFilter=this.items.filter((item)=>{return item.title.toLowerCase().includes(this.search_q.toLowerCase())})
-return itemWithFilter}}})})();</script>
 <hr>
 
 <div class="footer" >
@@ -82,27 +75,10 @@ Kamu juga boleh mampir ke Project saya <a href="https://fajarbaiz.com/#work">dis
          <footer>
             © 2019 | @fanpodcast.space
         </footer>
-          <!--footer-->
-          <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-          <script>
-    $(document).ready(function($){
-
-        $('.listSearch p').each(function(){
-            $(this).attr('searchData', $(this).text().toLowerCase());
-        });
-        $('.boxSearch').on('keyup', function(){
-        var dataList = $(this).val().toLowerCase();
-            $('.listSearch p').each(function(){
-                if ($(this).filter('[searchData *= ' + dataList + ']').length > 0 || dataList.length < 1) {
-                    $(this).show();
-                } else {
-                    $(this).hide();
-                }
-            });
-        });
-
-    });
-</script>
+    <!--footer-->
 <script type="text/javascript" src="https://fajarbaiz.com/assets/lib/js/darkmode.js"></script>
+<script src=https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.min.js></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://fajarbaiz.com/assets/lib/js/search-query.js"></script>
 </body>
 </html>
