@@ -291,6 +291,7 @@ a:active {
 	text-decoration: none
 }
 footer {
+	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	text-align: center;
@@ -301,8 +302,11 @@ footer {
 	margin-left: 50%;
 	padding: 8px 5%;
 	background: lightgrey;
-	width: 70%;
-	color: rgb(57, 57, 57)
+	width: 60%;
+	color: white
+}
+footer a{
+	text-decoration: none;
 }
 .footer {
 	display: flex;
@@ -331,7 +335,7 @@ footer {
 	margin-left: 50%;
 	padding: 8px 5%;
 	background: #2A343E;
-	width: 70%;
+	width: 60%;
 	color: white
 }
 @media only screen and (max-width: 600px) {
