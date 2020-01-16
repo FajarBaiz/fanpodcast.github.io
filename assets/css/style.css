@@ -7,6 +7,10 @@
 	margin-bottom: -20px
 }
 
+@font-face {
+        font-family: tulisan;
+        src: url(../font/sf-ui.otf);
+}
 .other{
 	display: flex;
 	justify-content: space-between;
@@ -21,7 +25,7 @@ body {
 	min-height: 100%;
 	font-size: 1.2rem;
 	line-height: 1.8rem;
-	font-family: 'lato', sans-serif;
+	font-family: tulisan;
 	margin: 0 auto;
 	padding: 20px 5% 60px;
 	color: rgb(87, 87, 87)
