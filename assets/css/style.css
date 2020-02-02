@@ -216,7 +216,7 @@ a:active {
 	color: black;
 	border: 0px;
 	padding: 10px;
-	width: 50%;
+	width: 100%;
 	border-radius: 10px;
 	font-size: 1rem;
 	margin-bottom: 20px;
@@ -228,7 +228,7 @@ a:active {
 	color: #fcfcfc;
 	border: 0px;
 	padding: 10px;
-	width: 50%;
+	width: 100%;
 	border-radius: 10px;
 	font-size: 1rem;
 	margin-bottom: 20px;
