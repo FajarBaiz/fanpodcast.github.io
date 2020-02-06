@@ -19,12 +19,15 @@
    
 </head>
 <body>
- <header>
-      <span>@fanpodcast.space</span>
-            <div id="theme">
-                <div onclick="setDarkMode(true)" id="darkBtn" class=""><span>🌚Dark</span></div>
-                <div onclick="setDarkMode(false)" id="lightBtn" class="is-hidden">  <span>🌝Light</span> </div>
-            </div>
+ <header><span>@fanpodcast.space</span>
+    <div id="theme" class="toggle-container">
+      <div onclick="setDarkMode(true)" id="darkBtn" class="">
+        <label class="buka" id="switch" name="theme" /></label>
+      </div>
+      <div onclick="setDarkMode(false)" id="lightBtn" class="is-hidden">
+            <label class="tutup" id="switch" name="theme" /></label>
+        </div>
+    </div>
   </header>
  
         <div class="columns">
