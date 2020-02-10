@@ -1,3 +1,13 @@
+@media only screen and (max-width: 780px){
+	.tweet{
+		display: none;
+	}
+}
+
+.darkmode .back-light{
+	display: none;
+}	
+
 /* TOGGLE NYA*/
 
 .buka {
@@ -185,11 +195,11 @@ blockquote {
 	}
 	.gkiri {
 		margin-bottom: -40px;
-		margin-top: -25px;
+		margin-top: -70px;
 		position: relative;
 		top: 80px;
-		right: 275px;
-		margin-right: -20px
+		right: 35px;
+		margin-right: 220px
 	}
 	.darkm {
 		position: relative;
@@ -206,7 +216,7 @@ blockquote {
 	}
 	.tubuh {
 		position: relative;
-		top: 40px;
+		top: 0px;
 		right: 261px;
 		margin-right: -265px
 	}
