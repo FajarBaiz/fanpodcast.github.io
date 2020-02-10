@@ -14,7 +14,12 @@
 }
 .darkmode .back-button{
 	color: #3498DB
-}		
+}
+
+.darkmode .pics{
+	display: none;
+}
+	
 
 /* TOGGLE NYA*/
 
