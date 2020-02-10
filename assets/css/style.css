@@ -4,9 +4,17 @@
 	}
 }
 
+/*
 .darkmode .back-light{
 	display: none;
-}	
+}
+*/
+.back-button{
+	color: #3498DB
+}
+.darkmode .back-button{
+	color: #3498DB
+}		
 
 /* TOGGLE NYA*/
 
