@@ -121,12 +121,14 @@ p {
 	display: block;
 	margin-top: 10px
 }
+/*
 .darkmode .line {
 	border-bottom: 2px solid white;
 	width: 100px;
 	display: block;
 	margin-top: 10px
 }
+*/
 .title {
 	font-size: 1.4rem;
 	font-weight: bold;
