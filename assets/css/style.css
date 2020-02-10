@@ -107,9 +107,9 @@ body {
 	min-height: 100%;
 	font-size: 1.2rem;
 	line-height: 1.8rem;
-	font-family: tulisan;
+	font-family:"Source Sans Pro","sans-serif";
 	margin: 0 auto;
-	padding: 20px 5% 60px;
+	padding: 35px 5% 60px;
 	color: rgb(87, 87, 87)
 }
 p {
@@ -132,9 +132,7 @@ p {
 	font-weight: bold;
 	color: #3498DB
 }
-.darkmode .title {
-	color: rgb(227, 227, 227)
-}
+
 .is-hidden {
 	display: none
 }
